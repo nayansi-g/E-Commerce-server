@@ -25,10 +25,10 @@ mongoose.connect("mongodb+srv://nayansigupta29:3DbxM4iF8i41R0uz@cluster0.f7yzs.m
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const corsOrigin = process.env.CORS_ORIGIN || "http://localhost:5173"; // or any other domains
+// const corsOrigin = process.env.CORS_ORIGIN || "http://localhost:5173"; 
 app.use(
   cors({
-    origin: corsOrigin,
+    origin: "https://e-commerce-client-steel-xi.vercel.app",
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
