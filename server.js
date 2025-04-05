@@ -25,9 +25,10 @@ mongoose.connect("mongodb+srv://nayansigupta29:3DbxM4iF8i41R0uz@cluster0.f7yzs.m
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const corsOrigin = process.env.CORS_ORIGIN || "http://localhost:5000"; // or any other domains
 app.use(
   cors({
-    origin: "https://e-commerce-server1-f29e2947016d.herokuapp.com",
+    origin: corsOrigin,
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
@@ -39,6 +40,7 @@ app.use(
     credentials: true,
   })
 );
+
 
 app.use(cookieParser());
 app.use(express.json());
