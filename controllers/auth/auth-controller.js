@@ -37,6 +37,7 @@ const registerUser = async (req, res) => {
 
 //login
 const loginUser = async (req, res) => {
+  console.log("api called")
   const { email, password } = req.body;
 
   try {
