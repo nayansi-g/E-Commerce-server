@@ -19,8 +19,8 @@ const createOrder = async (req, res) => {
     const create_payment_json = {
       intent: "sale",
       redirect_urls: {
-        return_url: "http://localhost:5000/shop/paypal-return",
-        cancel_url: "http://localhost:5000/shop/paypal-cancel",
+        return_url: "https://e-commerce-server1-f29e2947016d.herokuapp.com/shop/paypal-return",
+        cancel_url: "https://e-commerce-server1-f29e2947016d.herokuapp.com/shop/paypal-cancel",
       },
       transactions: [
         {
